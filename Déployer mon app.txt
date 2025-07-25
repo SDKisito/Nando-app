@@ -1,0 +1,187 @@
+cd "/mnt/c/Users/s.diedhiou/OneDrive - ITINOVA/Bureau/Nando app"
+
+git init
+git add .
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote remove origin
+git remote add origin https://github.com/SDKisito/Nando-app.git
+git push -u origin main
+
+
+sudo apt update
+sudo apt install nodejs npm -y
+node -v
+npm -v
+npm install -g netlify-cli
+
+ERREUR
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc   # ou source ~/.zshrc si tu utilises zsh
+nvm --version
+nvm install 20
+nvm use 20
+node -v   # doit afficher quelque chose comme v20.x.x
+npm -v
+npm install -g netlify-cli
+chmod +x scripts/deploy.sh scripts/build-mobile.sh
+./Scripts/deploy.sh
+# Exécuter le script de build mobile
+./scripts/build-mobile.sh
+
+✅ Étapes pour t’inscrire :
+Va sur : https://play.google.com/console
+
+Connecte-toi avec ton compte Google (ou crée-en un dédié pour ton entreprise).
+
+Accepte les conditions.
+
+Paie les 25 $ par carte bancaire.
+
+Vérifie ton identité (Google peut demander des infos personnelles ou professionnelles).
+
+Une fois validé, tu pourras créer une fiche d'application, téléverser ton fichier .aab, ajouter des captures d'écran, description, etc.
+
+
+
+
+1. Vérifie et ajuste les chemins et identifiants
+Dans la section submit.production.android.serviceAccountKeyPath, remplace ../path/to/api-key.json par le chemin réel vers ta clé de service Google Play (fichier JSON que tu récupères dans la Google Play Console).
+
+Dans la section iOS, remplace les valeurs appleId, ascAppId et appleTeamId par tes vraies infos Apple Developer.
+
+2. Lance un build production Android
+
+eas build --platform android --profile production
+
+
+Cela va générer un fichier .aab que tu pourras ensuite soumettre sur Google Play.
+
+3. Soumission automatique (optionnelle)
+Si tu as bien configuré ta clé Google Play et le reste, tu peux lancer directement la soumission :
+
+eas submit --platform android --profile production
+
+Cela enverra l’app sur la Google Play Console dans le track “internal” (test interne).
+
+https://app.netlify.com/projects/nando-app/
+npm install @react-native-picker/picker
+
+https://nando-app.netlify.app/
+
+
+const firebaseConfig = {
+  apiKey: "VOTRE_API_KEY", // Vous la trouverez dans la console Firebase sous Paramètres du projet > Général, ou dans le fichier de configuration généré pour votre application web.
+  authDomain: "nando-app-fa8bd.firebaseapp.com",
+  projectId: "nando-app-fa8bd",
+  storageBucket: "nando-app-fa8bd.appspot.com",
+  messagingSenderId: "782491892491",
+  appId: "VOTRE_APP_ID", // Vous la trouverez dans la console Firebase sous Paramètres du projet > Général, juste à côté du nom de votre application web enregistrée.
+};
+
+
+
+npm install --global eas-cli && npx create-expo-app nando-app && cd nando-app && eas init --id 6bb283fb-1a3d-4660-848c-86dc2f2651bd
+
+
+API Gemini
+AIzaSyD9mlTw-4vPIaDjGU205_3NX-CPKblryEw
+
+
+npx expo install expo-router@~3.5.23 expo-modules-core@~1.11.0 expo-linking@~6.3.1 @react-native-picker/picker@~2.7.5 babel-preset-expo@~11.0.14
+npm install @xmldom/xmldom@^0.8.10 glob@^9.0.0
+npm install --save-dev babel-plugin-inline-dotenv@^1.7.0
+
+
+rm -rf node_modules package-lock.json
+npm install
+npx expo install expo-router
+npx expo start --clear
+npm list babel-preset-expo
+
+npx expo start --web
+
+npm run build:web
+
+
+expo upgrade
+npm install expo-router@latest
+
+expo start -c e
+rm -rf node_modules/expo-router/.cache  
+npm install    
+
+
+
+# Nettoyer les caches
+expo start -c
+rm -rf node_modules/.cache
+
+# Réinstaller les dépendances
+npm install expo@latest expo-router@latest
+npm install
+
+
+# 1. Supprimez App.tsx s'il existe à la racine
+rm App.tsx
+
+# 2. Nettoyez les caches
+expo start -c
+
+# 3. Redémarrez en mode web
+npx expo start --web
+
+
+
+rm -rf node_modules/.cache
+npm install
+expo start --web --clear
+
+
+
+set EXPO_ROUTER_APP_ROOT=./app
+npx expo start --web --clear
+
+
+
+Étape 9 : Prochaines étapes
+Compléter les actifs : Ajoutez icon.png et splash.png dans src/assets/images.
+Implémenter les écrans : Développez ReceiveMoneyScreen.tsx et HistoryScreen.tsx.
+Intégration Stripe : Ajoutez STRIPE_API_KEY dans Netlify si nécessaire.
+Déploiement mobile : Testez sur iOS/Android :
+bash
+
+Réduire
+
+Envelopper
+
+Exécuter
+
+Copier
+npx expo run:ios
+npx expo run:android
+Si l'erreur persiste ou si d'autres problèmes surviennent, partagez les nouveaux logs, le contenu de src/screens/Main/SendMoneyScreen.tsx, ou d'autres fichiers pertinents, et je vous guiderai !
+
+
+
+24/07/2025
+rm -rf dist node_modules/.cache
+npm install
+npm run build:web
+
+Pour builder
+EXPO_ROUTER_APP_ROOT=./app npx expo export --platform web
+
+npx expo export --platform web --dev
+netlify deploy --dir=dist --prod
+netlify deploy --dir=dist --prod
+
+
+npm install --save-dev webpack@5.89.0 webpack-dev-server@4.15.0 @expo/webpack-config@^18
+
+rm -rf node_modules .expo .webpack package-lock.json
+npm install
+
+A lancer demain
+npx expo start --web --clear

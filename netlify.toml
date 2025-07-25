@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build:web"
+  publish = "dist"
+[build.environment]
+  NODE_VERSION = "18"
+  EXCHANGE_RATE_API_KEY = "606030ebb354d05cb16d416d"
+  FIREBASE_API_KEY = "AIzaSyDUH0LPaS-Db0zcxID_0ygFJG1PSqAgN7E"
+  FIREBASE_AUTH_DOMAIN = "nando-app-fa8bd.firebaseapp.com"
+  FIREBASE_PROJECT_ID = "nando-app-fa8bd"
+  FIREBASE_STORAGE_BUCKET = "nando-app-fa8bd.firebasestorage.app"
+  FIREBASE_MESSAGING_SENDER_ID = "782491892491"
+  FIREBASE_APP_ID = "1:782491892491:web:10ade94ba9f40a38b1400e"
+  FIREBASE_MEASUREMENT_ID = "G-GNFV56QGGG"
+  EXPO_ROUTER_APP_ROOT="./app"
+  EXPO_PUBLIC_ORIGIN="https://nando-app.netlify.app"
