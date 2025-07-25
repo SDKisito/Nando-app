@@ -1,8 +1,13 @@
-const { getDefaultConfig } = require('@expo/metro-config');
+// Fichier: metro.config.js (créer à la racine)
+const { getDefaultConfig } = require('expo/metro-config');
 
-const config = getDefaultConfig(__dirname);
+/** @type {import('expo/metro-config').MetroConfig} */
+const config = getDefaultConfig(__dirname, {
+  // [Web-only]: Enables CSS support in Metro.
+  isCSSEnabled: true,
+});
 
-config.resolver.sourceExts.push('wasm');
-config.transformer.assetPlugins = ['expo-asset/tools/hashAssetFiles'];
+// Ensure that Metro is watching the correct platforms
+config.resolver.platforms = ['native', 'web', 'ios', 'android'];
 
 module.exports = config;
